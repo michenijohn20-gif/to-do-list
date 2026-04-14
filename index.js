@@ -24,6 +24,7 @@ const resetBtn = document.getElementById("resetBtn");
 const timeSelect = document.getElementById("timerange");
 const subjectSelect = document.getElementById("subject");
 const currentTime = document.getElementById("currentTime");
+const currentDate = document.getElementById("currentDate");
 
 function updateCurrentTime() {
   const now = new Date();
@@ -89,7 +90,6 @@ resetBtn.addEventListener("click", () => {
   subjectSelect.disabled = false;
   timeSelect.disabled = false;
   startBtn.textContent = "Start";
-  stopBtn.textContent = "pause";
 });
 
 // this is for the todo-page
@@ -139,10 +139,5 @@ addTaskBtn.addEventListener("click", () => {
 
   taskInput.value = "";
 });
-// Initialize all popovers on the page
-const popoverTriggerList = document.querySelectorAll(
-  '[data-bs-toggle="popover"]',
-);
-const popoverList = [...popoverTriggerList].map(
-  (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl),
-);
+
+
