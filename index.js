@@ -13,7 +13,7 @@ navTodoBtn.addEventListener("click", () => {
   todoSection.style.display = "block";
 });
 
-// TIMER PAGE
+// this is for the timer-page
 let timer;
 let timeLeft;
 
@@ -41,7 +41,7 @@ updateCurrentTime();
 function updateDisplay() {
   let minutes = Math.floor(timeLeft / 60);
   let seconds = timeLeft % 60;
-  
+
   display.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
   return display.textContent;
 }
@@ -92,17 +92,16 @@ resetBtn.addEventListener("click", () => {
   stopBtn.textContent = "pause";
 });
 
-// --- TO-DO LIST PAGE ---
+// this is for the todo-page
 const taskInput = document.getElementById("task-input");
 const addTaskBtn = document.getElementById("add-task");
 const taskList = document.getElementById("task-list");
 
 taskInput.addEventListener("keypress", function (e) {
-    if (e.key === "Enter") {
-        addTaskBtn.click();
-    }
+  if (e.key === "Enter") {
+    addTaskBtn.click();
+  }
 });
-
 
 addTaskBtn.addEventListener("click", () => {
   const taskAlert = document.getElementById("task-alert");
@@ -118,12 +117,12 @@ addTaskBtn.addEventListener("click", () => {
     "list-group-item d-flex justify-content-between align-items-center";
 
   li.innerHTML = `
-    <span class="task-text">${taskText}</span>
-    <div>
-        <button class="complete-btn btn btn-sm btn-outline-success">Complete</button>
-        <button class="delete-btn btn btn-sm btn-outline-danger">Delete</button>
-    </div>
-`;
+      <span class="task-text">${taskText}</span>
+      <div>
+          <button class="complete-btn btn btn-sm btn-outline-success">Complete</button>
+          <button class="delete-btn btn btn-sm btn-outline-danger">Delete</button>
+      </div>
+  `;
 
   li.querySelector(".complete-btn").addEventListener("click", () => {
     li.querySelector(".task-text").style.textDecoration = "line-through";
@@ -140,3 +139,10 @@ addTaskBtn.addEventListener("click", () => {
 
   taskInput.value = "";
 });
+// Initialize all popovers on the page
+const popoverTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="popover"]',
+);
+const popoverList = [...popoverTriggerList].map(
+  (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl),
+);

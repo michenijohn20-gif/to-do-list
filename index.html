@@ -14,14 +14,18 @@
     <nav class="navbar navbar-expand navbar-dark bg-dark mb-4">
       <div class="container">
         <span class="navbar-brand">StudyTrackers</span>
-        <div class="btn-group" role="group">
-          <button id="nav-timer-btn" class="btn btn-outline-primary">
-            Timer
-          </button>
-          <button id="nav-todo-btn" class="btn btn-outline-primary">
-            To-Do List
-          </button>
-        </div>
+        <ul class="nav nav-underline">
+          <li class="nav-item">
+            <button id="nav-timer-btn" class="nav-link ">
+              Timer
+            </button>
+          </li>
+          <li class="nav-item">
+            <button id="nav-todo-btn" class="nav-link">
+              To-Do List
+            </button>
+          </li>
+        </ul>
       </div>
     </nav>
 
@@ -61,6 +65,7 @@
               <div class="col-md-6 mb-3">
                 <label for="timerange" class="form-label fw-bold">Time:</label>
                 <select id="timerange" class="form-select form-select-lg">
+                  <option value="1">1 minute</option>
                   <option value="5">5 minutes</option>
                   <option value="10">10 minutes</option>
                   <option value="15">15 minutes</option>
@@ -93,7 +98,9 @@
           <div class="col-sm-6 mb-3 mb-sm-0">
             <div class="card h-100 shadow-sm">
               <div class="hover card-body d-flexpon flex-column">
-                <h5 class="card-title text-primary"><b>Why Time Management Matters</b></h5>
+                <h5 class="card-title text-primary">
+                  <b>Why Time Management Matters</b>
+                </h5>
                 <p class="card-text">
                   Effective time management isn't just about "doing more"—it's
                   about "doing what matters" without burning out.
@@ -110,7 +117,9 @@
           <div class="col-sm-6">
             <div class="card h-100 shadow-sm">
               <div class="hover card-body d-flex flex-column">
-                <h5 class="card-title text-success"><b>Pomodoro Technique</b></h5>
+                <h5 class="card-title text-success">
+                  <b>Pomodoro Technique</b>
+                </h5>
                 <p class="card-text">
                   The Pomodoro Technique is designed to improve focus and
                   prevent mental fatigue by breaking work into short, intense
