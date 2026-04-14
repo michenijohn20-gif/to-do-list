@@ -1,0 +1,13 @@
+
+#currentTime {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.hover {
+    transition: all 0.4s ease-in-out;
+}
+.hover:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.03);
+    border-radius: 10px;
+}
